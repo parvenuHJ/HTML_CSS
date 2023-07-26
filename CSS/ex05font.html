@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size</title>
+    <style>
+        #pxFont{
+            font-size: 10px;
+        }
+        div{
+            font-size: 10px;
+        }
+        #emFont{
+            /* em , rem -> 폰트 사이즈 크기에만 사용 */
+            /* em : 부모 요소 크기에 따른 "배수 단위" */
+            /* % 는 쓸 수 없음 */
+            /* 1em -> 부모 크기 *1배 */
+            font-size: 1.5em;    
+        }
+        #remFont{
+            /* rem : html 문서의 폰트 크기에 따른 배수 단위*/
+            /* 아무효과도 안준 <p>폰트 크기 기준</p> 의 크기의 배수라고 생각하면됨 */
+            font-size: 1.5rem;
+        }
+
+        #wrap{
+            /* width : 100% -> div의 부모인 body 요소만큼 늘어남 */
+            width : 500px;
+            height : 500px;
+            background-color: coral;
+        }
+        #container1{
+            width : 50%;
+            height : 50%;
+            background-color: lightblue;
+        }
+        #container2{
+            /* 실행중인 창의 크기에 맞춰 상대 크기 조정
+            vw - viewpoint width
+            vh - viewpoint height
+            */
+
+            /* 전체 페이지의 너비 10퍼센트 -> 10vw */
+            /* 전체 페이지의 높이 10퍼센트 -> 10vh */
+            /* vw를 height에서, vh를 width에서 사용가능 */
+            /* 만약에 정사각형으로 만들고 싶다 -> width : 10vw, height : 10vw 으로 사용가능*/
+            width : 10vw;
+            height : 10vh;
+            background-color: lightgreen;
+
+        }
+    </style>
+</head>
+<body>
+    <p>폰트 크기 기준</p>
+    <p id = "pxFont">px로 조정</p>
+    <!--        div>p#emFont                -->
+    <div>
+        <p>div의 스타일 속성으로 인해 10px고정</p>
+        <p id="emFont">em으로 조정(10px * 1.5)</p>
+    </div>
+    <!--        p#remFont                    -->
+    <p id="remFont">rem으로 조정</p>
+
+    <div id="wrap">
+        <div id="container1"></div>
+        <div id="container2"></div>
+    </div>
+</body>
+</html>

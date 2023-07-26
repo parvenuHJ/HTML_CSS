@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tag</title>
+</head>
+<body>
+    <!-- table : 테이블이 들어갈 공간을 만들어주는 태그 -->
+    <table border="1px" bordercolor="red">
+        <!-- table row : 테이블에 한 줄을 만들어주는 태그 -->
+        <tr bgcolor = 'yellow'>
+            <!-- table head : 제목 셀로 값이 담기는 태그 -->
+            <th>이름</th>
+            <!-- colspan : columm 묶음 (가로 셀 병합) -->
+            <th colspan="2">성별/주소</th> 
+            <th>비고</th>
+
+        </tr>
+        <tr>
+            <!-- table data : 일반 셀로 값이 담기는 태그 -->
+            <td>양세영</td>
+            <td>여자</td>
+            <td>광주</td>
+            <!-- rowspan : row 묶음 (세로 셀 병합) -->
+            <td rowspan="2">비고내용</td>
+        </tr>
+        <td><img src="./img/KakaoTalk_20230724_143413943.jpg" alt="" width="50px"></td>
+        <td>남자</td>
+        <td>서울</td>
+        <tr>
+            <td>김훈종</td>
+            <td>남자</td>
+            <td>뉴욕</td>
+            <td rowspan="1"></td>
+        </tr>
+
+        
+    </table>
+</body>
+</html>

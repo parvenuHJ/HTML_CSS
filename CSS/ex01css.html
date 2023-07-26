@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <!-- 
+        스타일 시트 작성 방법
+        1. 내부스타일 : style 요소를 생성 후 스타일 지정
+        2. 외부스타일 : link 태그로 외부 파일에 접근하여 스타일 지정
+        3. 인라인스타일 : 요소 내 style 속성으로 스타일 지정
+    -->
+
+
+    <!--  내부스타일  -->
+
+    <!-- CSS 시작 알림 : <style> 태그             -->
+    <!-- CSS 문법 : 선택자 { 속성 : 값 ;}          -->
+        <style>
+            /*     CSS 안에 주석 넣는 방법 -> Ctrl + /       */
+
+            /*  무엇을? h1태그
+                어떻게? 글씨색을 빨간색으로!
+            */
+            h1{
+                color: #C81A2C;
+                background-color: #2F5542;
+            }
+            h2{
+                color: orange;
+            }
+           
+        </style>
+
+        <!-- 외부스타일 -->
+        <link rel="stylesheet" href="./ex01css.css">
+</head>
+<body>
+    <h1>빨강</h1>
+    <h2>주황</h2>
+    <h2>중복</h2>
+    <!-- 인라인 스타일  -->
+    <h3 style="color: blue; background-color: black;">초록</h3>
+
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* display : 요소가 화면에 보이는 방식 지정 */
+
+        p{
+            /* display : block
+            기본 값이 무조건 한 줄을 차지하고 있는 요소
+            width, height 설정이 가능
+            */
+            width:200px;
+            height:200px;
+            background-color: lightblue;
+            display:inline; /* inline 으로 바꿔서 span 태그 처럼 바꿈*/
+        }
+        span{
+            /* display : inline 
+            내가 담은 컨텐츠만큼만 크기로 가지는 요소
+            width, height 설정 불가능
+            */
+            width:200px;
+            height:200px;
+            background-color: lightpink;
+            display:block; /* block 으로 바꿔서 p 태그 처럼 바꿈*/
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 한줄복사 : Alt + Shift + 방향키 -->
+    <p>p태그입니다.</p>
+    <p>p태그입니다.</p>
+    <p>p태그입니다.</p>
+
+    <span>span태그입니다.</span>
+    <span>span태그입니다.</span>
+    <span>span태그입니다.</span>
+    
+</body>
+</html>

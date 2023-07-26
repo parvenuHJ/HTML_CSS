@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cascade</title>
+    <style>
+        /* cascade : 하나의 요소에 여러 스타일이 적용될 때 우선순위 */
+
+        /* 
+           우선순위 (가중치): 
+           전체 선택자(0) < 태그 선택자(1) (여기서는 li) < 클래스 선택자(10) < 아이디 선택자(100) < 인라인 스타일 속성
+           !important -> 최상위 적용 키워드
+           가중치 : #id p h1 -> 102     //  .class span #id -> 111
+        */
+        li{
+            color: red;
+        }
+        *{
+            color: green;
+        }
+
+
+        #idsel{
+            color: blue;
+        }
+        .classsel{
+            /* !important 작성 위치 -> 선언문 끝 ; 앞에 작성 */
+            color: purple !important;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li id="idsel" class="classsel" style="color: aqua;">CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>none</title>
+    <style>
+        /* 
+        1. answer 부분을 보이지 않게 지정
+        2. question에 마우스를 올렸을 때
+            answer 답변이 보이도록 지정
+        */
+        .answer{
+            display:none; /*영역표시도 안되고, 아예 없어짐*/
+            /* visibility: hidden;    : 영역표시는 되지만 안보임*/
+            
+        }
+        /* A : hover + B => A에 마우스를 올렸을 때 B가 보이도록 지정 */
+        .question:hover + .answer{
+            display : inline;
+        }
+        /* 
+        display : none -> 화면 상 영역 차지 X
+        visibility : hidden -> 보이지 않을 뿐, 존재하는 영역 O
+        */
+    </style>
+</head>
+<body>
+    <!-- span.question -->
+    <span class="question">Q.오늘은 무슨 요일인가요?</span>
+    <span class="answer">A.수요일입니다.</span>
+    <br><br>
+    <span class="question">Q.가장 재미있는 수업은 무엇인가요?</span>
+    <span class="answer">A. HTML, CSS입니다.</span>
+</body>
+</html>
