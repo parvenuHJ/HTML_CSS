@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu practice</title>
+    <style>
+        .cardWrap{
+            /* 메뉴판 전체 영역을 container
+            하나의 영역을 item으로
+             */
+            display: flex;
+            
+            /* iceWrap 줄바꿈될 수 있게 */
+            flex-wrap: wrap;
+
+            /* iceWrap 공간 배분, 주위에 동일한 여백 추가 */
+            justify-content: space-around;
+        }
+        .iceWrap{
+            background-color: red;
+            margin-bottom: 50px;
+            /* 아이스크림 하나의 영역을 container 
+            메뉴사진, 메뉴이름 item으로
+            */
+            display: flex;
+
+            flex-direction: column;
+            /* 사진과 이름을 세로로 배치 */
+
+            align-items: center;
+        }
+
+        .img1{
+            width: 300px;
+            height: 300px;
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/1515627535.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .img2{
+            width: 300px;
+            height: 300px;
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/1715155032.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .img3{
+            width: 300px;
+            height: 300px;
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/1715155055.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .img4{
+            width: 300px;
+            height: 300px;
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/1680847057.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .img5{
+            width: 300px;
+            height: 300px;
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/1515627535.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .img6{
+            width: 300px;
+            height: 300px;
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/1515627535.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="cardWrap">
+        <!-- 아이스크림 메뉴판 전체 영역 -->
+        <div class="iceWrap">
+            <!-- 아이스크림 메뉴 하나의 영역 -->
+            <div class="imgSec img1">
+                <!-- 아이스크림 메뉴 사진 -->
+            </div>
+                <p class="textSec">
+                    오레오 쿠키 앤 카라멜
+                    <!-- 아이스크림 메뉴 이름 -->
+                </p>
+        </div>
+        <div class="iceWrap">
+            <div class="imgSec img2">
+            </div>
+                <p class="textSec">
+                    엄마는 외계인 레디팩
+                </p>
+        </div>
+        <div class="iceWrap">
+            <div class="imgSec img3">
+            </div>
+                <p class="textSec">
+                    슈팅스타 레디팩
+                </p>
+        </div>
+        <div class="iceWrap">
+            <div class="imgSec img4">
+            </div>
+                <p class="textSec">
+                    블록팩 체리쥬빌레
+                </p>
+        </div>
+        <div class="iceWrap">
+            <div class="imgSec img5">
+            </div>
+                <p class="textSec">
+                    봉봉 아몬드
+                </p>
+        </div>
+        <div class="iceWrap">
+            <div class="imgSec img6">
+            </div>
+                <p class="textSec">
+                    봉아몬드봉
+                </p>
+        </div>       
+    </div>
+</body>
+</html>

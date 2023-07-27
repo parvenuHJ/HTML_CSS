@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header practice</title>
+    <style>
+        /* 1. ul태그 를 flex container로 지정
+        -> li 가로 배치 해주기 위해
+        */
+        ul{
+            display : flex;
+            list-style-type: none;  /* 글자 앞에 . 없애려고*/
+            font-size: 1.25rem;
+        }
+        /* 2. container div를 flex container로 지정
+        -> imgSec 과 ul 을 가로 배치 해주기 위해
+        */
+        .container{
+            display: flex;
+            background-color: gray;
+            padding : 0 10% ; /* 좌 , 우 에만 10% 여백 */
+            justify-content: space-between;
+        }
+        /* 3. imgSec div를 flex container로 지정
+        -> img 가운데 정렬하기 위해
+        */
+        .imgSec{
+            display: flex;
+            align-items: center;
+        }
+        /* 4. li 형태 잡아주기 */
+        li{
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imgSec">
+            <img src="data:image/webp;base64,UklGRnAEAABXRUJQVlA4IGQEAACwFwCdASqhACQAPt1gqE+opSOiKbZsKRAbiUAaVEJWpDmD0Hf7nEidOSj8L7l4R+Qz2nIIbW7//8/5id6O1lu3nLf6zxG6U2Z35EvrEv/Mwszv5sB81aVuj9OCov2COMGb5VunVjeTfmnVsMKudQjg8lL7Z86Rj5+Z7XZHo9emD9S1wD5t83K9KuIMffkKCQYn+RVz/MwVJj515SjQBz/36d3tbWb7I+cBi4HDipF+i6yZwS27NgMKqjv1VGFbdgs5bBYsNAAA/vC7r8CE3a9b8PGWACmtKUcNJlfLBuo1AGz50f6XTw/Wm3pk69TKKee/4w9vQIBWZuYQ1XERZCQdUiDpoLW3I9VnXzP12hcZcswTPDlJgBlzAh+1h+f9bA/3pakrn5qEpQIu3A4jqjcZk+jnlvv+3GQMe15Iz1MDNyTnJvFfxxMGdyWcdFh/j1Yj6H5wX065FdzSE8N8j+Iit7VBndu5ikB2v6J0NpR94OljveJJLRqR90UQaC06LJymMYtjc0fqSDcXVsfyvjVSK0BCtjEoonbS1xoo0NobTykVLjSk76N1T4d09o05UKhLaGuMXbbr05ujWdLzj5wdWE5bVOXdnmjqj/pedazM9XQ8djY6F0GXZpjHyFe20wRLbe/dQj5u0GqPgtdflh2cfrmPXR0yfgkK0qp4DmkK5Dv7Cpzt63/cPoxDzX1hl7+eEpdLOTA+Vu7as+qLwOWAfZG+ri054D9XYCbi+e8gnjA0LkzGfve6o//IHo0Fz2VKsWyJuk+WTaq+3vA8Ngtjft1hzw9aC3VPZRYY7SD/as4UYIryPvlEqpgZoVt7GiNxy1MeHIbLGjz5ZWtyOfPXKMks1AZA+MX4VIGCl1IPh5xxcTuOlmtwdMdenrCkqw3xCzizDb/ozx20nBK+v1gqTcep3ljZ/PZdbe/wAVjAzb79T5mhic8ytaNCvsgEBvdenhpD9iSEWXBTVd9V07FFUcIOaCqDPwIQvtR8pg1MDEdODDDIZUODN+19l1f5o/m6m2gmzdcjCIaKAJfjuUD+yyNrCuTjspUKdPlcDtdwzHCkCsErunt0NTbbscjuePEP302HMaRF5u3rHt/QDXftQFnE3wdzNc5XYbixWDt3Erf741wRAc/OcqD0IxKMzrT13rHoHP5P/JggQ2JqPqELpP5dzINzNb+/aJchWKhAT8F3tygBo2BtHuHMzPH8yHntdsz205iJc/WlUIPjo0wZL2oM1cpHWeIfcrMmE0CZyrrordOGCyl8ZwXs/vGok/YIORmQO4pGqSDtw+Cyz4Ur2IM4MlVsm5Xj14rW2iRE8qeuk/EMMjBHHXBe61LsUXvhtlQuwRpaoXHP4mWIe+QUfX8uX70OSbBuGdCafI+p5fzLnjZIpl3X6CwFYtRmnkxqDneF5/Wd9mCxjccn+cz330rJ69ZUdJwAPD0ucfY3fAshDi8v1YMZmeQD7JTWhzfAGsnfUeGZeGwJFYYA2FsAAAAAAA==" alt="">
+        </div>
+        <ul>
+            <li>소식</li>
+            <li>게임</li>
+            <li>카드 게임</li>
+            <li>애니메이션</li>
+            <li>상품</li>
+            <li>포켓몬 도감></li>
+            <li>포켓몬 스토어</li>
+        </ul>
+    </div>
+</body>
+</html>

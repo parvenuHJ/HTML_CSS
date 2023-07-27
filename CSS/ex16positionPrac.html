@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position practice</title>
+    <link rel="stylesheet" href="./boxModel.css">
+    <style>
+        /*  greenbox를  absolute  속성으로 왼쪽 200px만 가면 마진과 패딩이 남아있어서 겹쳐서보임 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #redBox{
+            position : static;
+        }
+        #blueBox{
+            position : relative;
+            left : 100px;
+        }
+        #greenBox{
+            position : absolute;
+            left : 200px;
+            
+        }
+        #grayBox{
+            position : relative;
+            left : 300px;
+            top : 100px;
+        }
+        #Q{
+            position : fixed;
+            left : 300px;
+        }
+
+
+    </style>
+</head>
+<body style="height: 1000px;">
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+    <div id = "Q"><img src="https://cf.channel.io/pub-file/133531/646dd3a4215642d715dc/ct_pc150" alt="" width="200px" height="100px"></div>
+</body>
+</html>

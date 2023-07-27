@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout practice</title>
+    <style>
+        /* 
+                색상 표기 방법
+        (1) 색상 이름 : HTML 컬러명을 이용해서 색상 지정
+                        coral, orange, ...
+        (2) HEX 값 : #rrggbb, 00~ff 사이의 16진수 값
+                     #ff0000 -> red, #0000ff -> blue
+        (3) RGB 값 : rgb(red, green, blue), 0~255 값
+                     rgb(0, 0, 0) -> black, 
+                     rgb(255, 255, 255) -> white
+        (4) RGBA 값 : rgba(red, green, blue, alpha)
+                      a:alpha -> 색상 투명도 조정, 0~1 값
+        */
+        .item{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .item1{
+            width: 100px;
+            height: 100px;
+            background-color :#ff6347;
+        }
+        .item2{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+        .item3{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(red, green, blue, alpha)
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+        }
+        .header{
+            height: 10%; /* 부모 - container 의 10%*/
+            background-color: #F2F2F2;
+        }
+        .nav{
+            height: 10%;
+            background-color: #A66151;
+        }
+        .side{
+            float: left;
+            width: 30%;
+            height: 60%;
+            background-color: #732D14;
+        }
+        .section1{
+            font-family:fantasy;
+            line-height : 150px;
+            text-align: center;
+            font-size: x-large;
+            height: 30%;
+            background-color : #1E5949;
+        }
+        .section2{
+            height: 30%;
+            background-color : #BF2441;
+        }
+        .footer{
+            height: 20%;
+            background-color: #8A8D92;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="side"></div>
+        <div class="section1">Guzzi</div>
+        <div class="section2"></div>
+        <div class="footer"></div>
+    </div>
+    <div class="item"></div>
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+</body> 
+</html>
