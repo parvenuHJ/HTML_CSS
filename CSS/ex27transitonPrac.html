@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trasition Practice</title>
+    <style>
+        /* 1. 너비 300px, 높이 100px
+            테두리 두께 3px인 버튼 틀 */
+        .outer{
+            width:300px;
+            height:100px;
+            border: 3px solid black;
+            position: relative;
+            left: 100px;
+
+        }
+
+        /* 2. 버튼 안에서 배경이 차오르는 부분
+                높이 100%  , 너비 0% -> 마우스 올릴 시 100%*/
+        .inner{
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background-color: wheat;
+           
+            
+        }
+        
+        /* 지금 inner의 width가 0%라서 마우스를 올릴 영역이 없음
+        -> outer 요소에 마우스를 올렸을 때 inner의 스타일을 변경 */
+        /* 중요!! 여기서 outer와 inner 선택자(자손( ), 형제(+), 자식(>))를 잘 선택해야함!!! */
+        .outer:hover>.inner{
+            /* 몰랐던 부분 ---- */
+            transition-duration: 2s; 
+            width: 100%;
+            
+
+            background-color: yellow; 
+           
+        }
+
+        /* 3. 버튼 위에 글씨 얹기 */
+        .text{
+            /* 
+            .text를 outer의 크기와 맞춰주면 display:flex - justify와 align = center로 해주면
+            나중에 outer 위치를 이리저리 움직여도 항상 가운데 정렬해 있게 된다!!!!!!!!
+            */
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+            font-size: 2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--
+        display 기본값이 static이여서 .text를 absolute로 바꾸면  .text의 부모 : body
+        => .outer를 relative로 바꿔주면   .text의 부모 :  outer
+        => 그런데 .inner가 자리를 차지하고있어서 .inner 도 absolute로 맞춰줌
+        -->
+    <div class="outer"> 
+        <div class="inner"></div>
+        <div class="text">생맥주</div>
+    </div>
+</body>
+</html>

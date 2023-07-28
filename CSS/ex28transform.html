@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        /* 
+        transform : 회전, 크기 조절, 기울이기, 이동효과 등
+                    요소를 변형시키는 속성
+        -> translate : 요소의 위치를 이동
+        -> scale : 요소의 크기를 확대 또는 축소
+        -> rotate : 요소를 회전 (deg)
+        -> skew : 요소를 기울임 (deg)
+        */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            font-size: 3rem;
+
+            /* 
+            position을 바꾸는 것은 - 다른 요소들의 위치에 영향이 가지만
+            transform으로 위치를 조정하면 다른 요소들에 영향없음
+             */
+
+             /* transform 여러 속성 사용할 때 방법 */
+             /* 잘못된 예시
+            transform: translate(100px,100px);
+            transform: scale(1.1);
+            */
+            transform: translate(100px,100px) scale(1.2) rotate(20deg) skew(30deg,10deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">위</div>
+    
+</body>
+</html>

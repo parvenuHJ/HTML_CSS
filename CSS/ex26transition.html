@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+
+            transition-duration: 2s;
+
+            /* 어떤 속성에 transition을 줄지 지정 */
+            transition-property: background-color;
+
+            /* 요소에 직접 사용
+            마우스 올릴 때, 내릴 때 모두 적용 */
+        }
+        .box:hover{
+            background-color: brown;
+            border-radius: 50%;
+
+            /* transition-duration: 2s; */
+
+            /* 이벤트에 적용
+            마우스에 올릴 때 적용, 내릴 때는 X */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

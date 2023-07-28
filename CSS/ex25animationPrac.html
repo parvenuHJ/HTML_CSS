@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation practice</title>
+    <style>
+        /* 두개의 이미지가 2초 간격으로
+        계속해서 재생되는 화면 만들기 */
+        .imgSec{
+            width: 800px;
+            height: 450px;
+            
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            /* Youtube에 css animation 치면 따라해볼 효과들 나옴 */
+
+            /* 1. 애니메이션 이름  */
+            animation-name: imgAni;
+
+            /* 2. 애니메이션 지속 시간 */
+            animation-duration: 1s;
+
+            /* 방향 지정 */
+            animation-direction: alternate;
+
+
+            /* 반복 횟수 지정 */
+            animation-iteration-count: infinite;
+
+            /* 수치 변형 함수 지정 */
+            animation-timing-function:cubic-bezier(0, -0.17, 0, 1.12);
+
+        }
+        @keyframes imgAni {
+            from{
+                background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/013201.png);
+            }
+            to{
+                
+                background-image: url(https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000701.png);
+                margin : 200px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="imgSec">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /* 
+        animation : 요소에 적용되는 스타일을 다른 스타일로
+                    부드럽게 전환시켜주는 속성
+        */
+        .box{
+            width:100px;
+            height: 100px;
+            background-color: salmon;
+
+            /* 이름을 지정 */
+            animation-name: boxAni;
+
+            /* 지속 시간 지정 */
+            animation-duration: 1s;
+
+            /* 반복 횟수 지정
+            infinite -> 무한 반복 */
+            animation-iteration-count: infinite;
+
+            /* 방향 지정
+            normal -> 기본값 , →→→→
+            reverse -> 역방향, ←←←←
+            altnernate ->  →← →← →←
+            alternate-reverse -> ←→ ←→ ←→*/
+            animation-direction: alternate-reverse;
+
+            /* 지연 시간 지정(웹 페이지가 로딩이 되고난 후 지정된 시간 후에 애니메이션 시작) */
+            animation-delay: 2s;
+
+            /* 수치 변형 함수 지정 -> 웹페이지에서 F12 -> 
+            animation-timing-function 에서 옆 코드 목록 에서 선택 후S모양 버튼 눌러서 움직임 편집 후 아래 작성된 
+            cubic-bezier 복사 붙여넣기*/
+            animation-timing-function: cubic-bezier(0, 1.47, 1,-0.64);
+        }
+            
+
+        /* 애니메이션 움직임을 제어 */
+        @keyframes boxAni {
+            from{
+                /* 시작 지점 */
+            }
+            to{
+                /* 도착 지점 */
+                margin-left: 200px;
+                background-color: black;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

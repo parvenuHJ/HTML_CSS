@@ -29,7 +29,8 @@
             */
 
             flex-wrap : wrap;
-            /* flex-wrap : 아이템들의 줄바꿈을 결정하는 속성
+            /* 
+            flex-wrap : 아이템들의 줄바꿈을 결정하는 속성 (아이템이 콘테이너에서 넘칠 때 어떻게 할건지)
             -> nowrap : 기본값, 줄바꿈X
             -> wrap : 줄바꿈O
             -> wrap - reverse : 줄바꿈O , 역순 배치
@@ -39,7 +40,9 @@
              */
 
              justify-content: space-around;
-             /* justify-content : 메인축 방향 아이템 정렬 지정 
+             /* 
+             justify-content : "메인축" 방향 아이템 정렬 지정 
+             align-items     : "수직축(교차축)" 방향 아이템 정렬 지정 
              -> flex-start : 기본값 , 시작점으로 정렬
              -> flex-end : 끝점으로 정렬
              -> center : 가운데 정렬
@@ -79,10 +82,10 @@
             /* column 축이 메인 축 일떄                              */
             flex-direction: column;
 
-             /* 메인축 방향 아이템 가운데 정렬 -> justify-content */
+            /* 메인축 방향 아이템 가운데 정렬 -> justify-content */
             justify-content: center;  /* --> "세로축" 가운데 정렬
 
-              /* 수직축(메인축에 수직된 축) 방향 아이템 가운데 정렬 -> align-items */
+            /* 수직축(메인축에 수직된 축) 방향 아이템 가운데 정렬 -> align-items */
             align-items: center; /* -->  "가로축" 가운데 정렬*/
 
 

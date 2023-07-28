@@ -12,13 +12,17 @@
             display : flex;
             list-style-type: none;  /* 글자 앞에 . 없애려고*/
             font-size: 1.25rem;
+            align-items: center;
+            color: aliceblue;
+            
+            padding: 20px;
         }
         /* 2. container div를 flex container로 지정
         -> imgSec 과 ul 을 가로 배치 해주기 위해
         */
         .container{
             display: flex;
-            background-color: gray;
+            background-color: rgb(63, 62, 62);
             padding : 0 10% ; /* 좌 , 우 에만 10% 여백 */
             justify-content: space-between;
         }
@@ -31,8 +35,43 @@
         }
         /* 4. li 형태 잡아주기 */
         li{
-            margin: 0 15px;
+            margin: 0 30px;
+            padding : 5px 15px;
+            font-size: 1.5rem;
         }
+        .search{
+            background-color: #e83e8c;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+        }
+        .search:hover{
+            background-color: black;
+            text-decoration: none;
+        }
+        /* 5. 마우스 올렸을 때 효과주기 */
+        li:hover{
+            background-image: url(https://www.pokemonkorea.co.kr/img/icon/icon_ball_b.png);
+            background-repeat: no-repeat;
+            padding: 0 0 0 30px;
+            color:#e83e8c;
+            text-decoration:underline;
+            text-underline-position: under;
+            /* 밑줄을 훨씬 더 아래로 표현하기 */
+            
+            cursor:pointer;
+            /* 
+            커서 속성 알아보는 사이트: 
+            https://developer.mozilla.org/ko/docs/Web/CSS/cursor 
+            */
+        }
+
+        /* 
+        메뉴버튼이 움직임(이유 : 메뉴버튼에 배경화면 패딩을 넣어서) -> 해결방법 : ul의 padding을 늘려줬음
+        search class만 제외하는법(li 전체 style을 적용시켜서)
+         */
+
     </style>
 </head>
 <body>
@@ -46,8 +85,9 @@
             <li>카드 게임</li>
             <li>애니메이션</li>
             <li>상품</li>
-            <li>포켓몬 도감></li>
+            <li>포켓몬 도감</li>
             <li>포켓몬 스토어</li>
+            <li class="search">🔍︎</li>
         </ul>
     </div>
 </body>
