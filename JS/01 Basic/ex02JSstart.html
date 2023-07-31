@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS start</title>
+</head>
+<body>
+    <a href="#">안녕하세요!</a>
+    <br><br>
+    <button id = 'btn1'>불좀 꺼줄래</button>
+    <button id = 'btn2'>불좀 켜줘</button>
+    <br>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h1>오늘은 월요일 ㅠㅠㅠ</h1>
+    <p>1시간 일찍 가야징</p>
+
+    <script>
+        // 첫번쨰 버튼 클릭 시
+        document.getElementById('btn1').addEventListener('click', ()=>{
+            // 배경색, 글씨색 스타일 변경
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'red';
+            
+
+        })
+
+        // 두번째 버튼 클릭 시
+        document.getElementById('btn2').addEventListener('click', ()=>{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black'
+        })
+    </script>
+</body>
+</html>
