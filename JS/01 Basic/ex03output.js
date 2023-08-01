@@ -5,7 +5,7 @@
 
 // 1. HTML 문서 내 출력
 document.write('HTML 문서 내 출력');
-document.write('<h1> h1태그로 출력</h1>');
+document.write('<h1 id=idTag>h1태그로 출력</h1>');
 document.write('<h2>');
 document.write('h2태그로 출력');
 document.write('</h2>');
