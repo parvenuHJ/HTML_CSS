@@ -13,7 +13,7 @@ for (let i = 0 ; i < arr.length ; i++){
 }
 console.log('for', max);
 // 2-2. for - of문
-// arr[i] 를 i 로 표현
+// arr[i] 를 i(또는 다른 변수로 지정가능) 로 표현
 for (let i of arr){
     if(max < i){
         max = i;
@@ -28,13 +28,13 @@ arr.forEach((element)=>{
 })
 console.log('forEach', max);
 
-// 2-3. for each문 2
+// 2-3. for each문 2 -> forEach는 요소를 꼭 사용해줘야 오류가 안남
 // 배열에 있는 요소 하나하나에 접근을 하는 느낌 (element은 필수지만, 그 다음 index...등 은 필수는 아님)
-arr.forEach((element,index)=>{
-    if(arr[index]) > max){
-        arr[index] = max;
-    }
-})
+// arr.forEach((element,index)=>{
+//     if(arr[index]) > max){
+//         arr[index] = max;
+//     }
+// })
 console.log('forEach2', max);
 
 //  3. 형태에 맞춰서 알림창 팝업창으로 출력한다.

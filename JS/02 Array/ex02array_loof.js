@@ -18,3 +18,5 @@ coffee_list.forEach((element, index)=>{
     console.log(index,element);
 }) // forEach(데이터가져오는 변수이름(이름지정가능) , 인덱스 번호(이름지정가능) ) -> 순서가 중요
    // console.log(index,element) 는 그냥 출력 순서
+
+

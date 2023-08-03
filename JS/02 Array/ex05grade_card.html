@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grede card</title>
     <style>
+        /* table이랑 td 동시에 태그 선택자로 가져와서 편집 */
         table, td{
-            border: 1px, solid black;
+            border: 1px solid black;
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
@@ -27,25 +30,30 @@
         for ( let i = 1 ; i <= sub_num ; i++){
             sub_name.splice(i,0,prompt('점수를 입력할 과목을 입력하세요'));
             // sub_name.push(prompt('점수를 입력할 과목을 입력하세요') 도 가능
+            // usshift를 사용하면 역순으로 추가가 되기때문에 push를 사용
             
         }
         console.log(sub_name);
 
         // 3. 각 과목들의 점수를 입력
         for ( let i = 1 ; i <= sub_num ; i++){
-            sub_score.splice(i,0,prompt(sub_name[i-1] + '의 점수를 입력'))
-
-        }
-        console.log(sub_score);
+            sub_score.splice(i,0,Number(prompt(sub_name[i-1] + '의 점수를 입력')))
+            // sub_score.push(Number(prompt(`${sub_name[i-1]}의 점수를 입력하세요.`))) 도 가능
 
         // 4. 총점, 평균 점수 도출
-        for ( let i = 0 ; i < sub_num ; i++){
-            total_score += Number(sub_score[i])
+            total_score += sub_score[i-1]
+
+
         }
+        avg_score = parseInt(total_score / sub_name.length);
+        // 여기서 Number로 묶어봤자 소수점도 Number형이라서 안됨
+        
+        console.log(sub_score);
+
         console.log(total_score);
 
-        avg_score = total_score / sub_name.length;
         console.log(avg_score);
+        
 
 
 
@@ -53,28 +61,46 @@
         
         
         // 5. 각 점수, 총합. 평균을 HTML 문서 내 테이블로 출력
-        document.write("<table>");
+        let print_table = `
+        <table>
+            <tr>
+            
+        `
+        // print_table +=
+        // `
 
-        document.write('<tr>')
-        for ( let i = 0 ; i < sub_num ; i++){
-            document.write(`<td> ${sub_name[i]}`)
-            document.write('</td>')
+
+        //         <td>자바</td>
+        //         <td>안드로이드</td>
+
+        // `
+        for(let i =0; i <sub_num ; i++){
+            print_table += `<td>${sub_name[i]}</td>`;
         }
-        document.write('<td> 총합 </td')
-        document.write('<td> 평균</td')
-        document.write('</tr>')
-
-        document.write('<tr>')
-        for ( let i = 0 ; i < sub_num ; i++){
-            document.write('<td>', sub_score[i])
-            document.write('</td>')
+        print_table +=
+        `
+                <td>총합</td>
+                <td>평균</td>
+            </tr>
+            <tr>
+        `
+        // print_table +=
+        // `
+        //         <td>100</td> 
+        //         <td>80</td>         
+        // `
+        for(let i = 0; i<sub_num; i++){
+            print_table += `<td>${sub_score[i]}</td>`;
         }
-        document.write(`<td> ${total_score} </td>`);
-        document.write(`<td> ${avg_score} </td>`);
-        document.write('</tr>');
 
-        document.write('</table>')
-        
+        print_table +=
+        `
+                <td>${total_score}</td>
+                <td>${avg_score}</td>
+            </tr>
+        </table>
+        `
+        document.write(print_table)
         </script>
        
 </body>
