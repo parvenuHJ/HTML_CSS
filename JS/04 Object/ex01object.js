@@ -4,7 +4,8 @@
 객체 구조
 let object = {
     key1 : value1,
-    key2 : value2,
+    key2 : value2, 
+        key2_1 : value3, 
     .
     .
     .
@@ -29,8 +30,17 @@ let person = {
     },
     smhrd : ['양세영', '이주희','정봉균']
 }
+// person = '장원영'
+console.log(person);
+// 위에서 person을 const 로 선언하게되면
+// person = '장원영' 으로 하게 되면 오류 ( 재할당이 안되니까 )
+
+
+
 
 // 객체 접근
+// object.key1
+// object.key2.key2_1
 console.log(person);
 console.log("이름 : ", person.name);
 console.log("나이 : ", person.age);
@@ -51,6 +61,8 @@ person_name = '뷔';
 console.log(person.name);
 */
 
+// object 에 key, value 추가
+// object.key = value;
 // weight에 70을 추가
 person.weight = 70;
 console.log('몸무게 추가 : ', person.weight);

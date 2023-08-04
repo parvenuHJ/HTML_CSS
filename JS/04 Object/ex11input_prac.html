@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input Practice</title>
+</head>
+<body>
+    <h1>입력한 값을 h1 태그로 출력해보기</h1>
+    <input type="text" id="input_tag">
+    <button onclick="get_input()">h1태그 출력</button>
+
+    <!-- h1태그 출력될 공간 -->
+    <div id="div_Tag"></div>
+
+    <script>
+        // 1. 버튼 클릭 시
+        // 2. input 요소 가져오기
+        let tag1 = document.getElementById('div_Tag')
+        const get_input = () => {
+            let get1 = document.getElementById('input_tag').value;
+            tag1 +=`<h1>${get1}</h1>`
+            document.write(tag1)
+        }
+        // 3. 입력값 h1 태그로 출력하기
+        
+        
+        
+
+    </script>
+</body>
+</html>

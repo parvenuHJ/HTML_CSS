@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <h1>클릭 한번 해볼까요?</h1>
+    <button onclick="h1_tag()">h1태그 생성</button>
+    <button onclick="a_tag()">a태그 생성</button>
+    <button onclick="ul_tag()">ul태그 생성</button>
+
+    <!-- 태그가 생성될 공간 -->
+    <div id="container"></div>
+
+    <script>
+    
+        // 1. 태그를 생성할 공간인 div 요소 가져오기
+        let tag1 = document.getElementById('container');
+        
+        // 2. 버튼 별로 가지고 온 div 요소 안에 태그 생성하기
+        
+        //  += 로 누적시켜서 계속 출력하기
+        // 2-1. h1태그
+        const h1_tag = () => {
+            tag1.innerHTML += '<h1> 이게 되네???? </h1>'
+        }
+        // 2-2. a태그
+        const a_tag = () => {
+            tag1.innerHTML += '<a href="#"> a태그 생성해보기 </a>'
+        }
+        // 2-3. ul태그
+        const ul_tag = () => {
+            tag1.innerHTML += 
+            `<ul> 
+            <li>안녕</li>
+            <li>세상아!</li>
+            </ul>`
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <input type="text" id="input_tag">
+    <button onclick="getText()"> 클릭 </button>
+
+    <script>
+        // input, textarea, select요소 -> value 속성으로 접근!
+
+        // 버튼 클릭 시, input 요소 안의 텍스트를 출력
+        const getText = () => {
+            console.log('test');
+            let input_element = 
+            document.getElementById('input_tag').value; //-> value 속성이라서 .innerText 로 하면 안됨
+            console.log(input_element);
+            alert(input_element);
+        }
+    </script>
+</body>
+</html>
