@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback fucntion</title>
+</head>
+<body>
+    <button>Click!</button>
+    
+    <script>
+        /*
+        Callback 함수
+        - 어떤 이벤트가 발생하거나, 특정 시점에 도달했을 떄
+            시스템에서 호출하는 함수
+        - 함수에 파라미터로 들어가는 함수
+        */
+
+        // 1. 어떤 이벤트가 발생했을 때 : addEventListner()
+
+        // button의 id를 따로 설정해주지 않아서 -> 태그 선택자로 가져옴
+        document.querySelector('button').addEventListener('click', ()=>{
+            console.log('🍫');
+        }) // ()=>{} : 익명함수 - 한번만쓰고 버리는 함수
+
+        // 2. 특정 시점에 도달했을 때 : setTimeout()
+        console.log('☕');
+        setTimeout(()=>{
+            console.log('🍉🍉🍉');
+        }, 2000) // 1 초 -> 1000
+        console.log('🍔');
+
+    </script>
+</body>
+</html>

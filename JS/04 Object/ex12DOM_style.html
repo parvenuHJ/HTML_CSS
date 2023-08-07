@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Style</title>
+</head>
+<body>
+    <span id = 'span_id' class ='span_class'>
+        아래 버튼을 클릭하면 이 텍스트의 색깔과 크기가 변해요!
+    </span>
+    <br>
+    <button onclick='click_func()'> Click! </button>
+
+    <script>
+        /*
+        DOM 스타일 제어
+        HTMLElement.style.property = value
+
+        querySelector(All) : CSS 선택자로 요소 검색
+        */
+
+        // 1. 스타일을 제어할 span 요소 가져오기
+        let span_element = document.getElementById('span_id');
+        span_element = document.getElementsByClassName('span_class')[0]; // class 이름으로 가지고오기 , 배열
+        span_element = document.querySelector('#span_id'); // 아이디 선택자
+        span_element = document.querySelectorAll('.span_class')[0]; // 클래스 선택자
+        console.log(span_element);
+                                
+
+        // 2. 버튼 클릭 시, span 요소의 스타일 변경
+        const click_func = () => {
+            // 글자 색상(color) : tomato
+            span_element.style.color = 'tomato';
+            // 글자 크기(fontSize) : 25px
+            span_element.style.fontSize = '25px';
+            // 글자 굵기(fontWeight) : 900
+            span_element.style.fontWeight = '900';
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Practice</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #redBox{
+            background-color: red;
+        }
+        #blueBox{
+            background-color: blue;
+        }
+        #greenBox{
+            background-color: green;
+        }
+        #grayBox{
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+    <button onclick="move()">이동하기!</button>
+    <button onclick="round()">둥글게!</button>
+
+    <script>
+        // 1. 스타일 제어할 대상을 가져오기
+        let red = document.getElementById('redBox');
+        let blue = document.getElementById('blueBox');
+        let green = document.getElementById('greenBox');
+        let gray = document.getElementById('grayBox');
+
+        // 2. 이동하기 버튼 클릭 시, 이동
+        //    (marginLeft)
+        const move = () => {
+            blue.style.marginLeft = '100px';
+            green.style.marginLeft = '200px';
+            gray.style.marginLeft = '300px';
+
+        }
+        // 3. 둥글게 버튼 클릭 시, 둥글게
+        //    (borderTopRightRadius,
+        //     borderBottomLeftRadius)
+        const round = () => {
+
+            // red.style.borderTopRightRadius = '50%';
+            // red.style.borderBottomLeftRadius = '50%'
+
+            let div_list = document.querySelectorAll('div');
+            console.log(div_list); // NodeList로 리스트에 담겨있음
+
+            // HTML_collection -> forEach 불가능
+            // NodeList -> forEach 가능
+            div_list.forEach(element => { // 함수(요소) =>{} 일때 요소가 1개면 ()생략가능 
+
+            element.style.borderTopRightRadius = '50%';
+            element.style.borderBottomLeftRadius = '50%';
+            })
+            
+            
+
+        }
+
+    </script>
+</body>
+</html>

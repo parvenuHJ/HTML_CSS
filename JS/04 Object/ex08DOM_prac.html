@@ -6,9 +6,28 @@
     <title>DOM Practice</title>
 </head>
 <body>
-    <span id="spanTag"></span>
+    <span id="spanTag">0</span>
     <br>
-    <button>+1 증가</button>
-    <button>-1 감소</button>
+    <button onclick="increase_num()">+1 증가</button>
+    <button onclick="decrease_num()">-1 감소</button>
 
+    <script>
+        // 1. span 요소 가져오기
+        let span_value = document.getElementById('spanTag');
+
+        // 2. +1 버튼 클릭 시, 숫자 증가
+        const increase_num = () => {
+            span_value.innerText = Number(span_value.innerText)+1;
+        }
+
+        // 3. -1 버튼 클릭 시, 숫자 감소
+        const decrease_num = () => {
+            
+            // 4. -1 버튼 클릭 시, 0 이하에서는 감소X
+            // 01 Basic - ex12 참고
+            Number(span_value.innerText) > 0 && 
+            (span_value.innerText = Number(span_value.innerText)-1);
+        }
+
+    </script>
 </html>

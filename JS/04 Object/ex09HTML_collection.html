@@ -18,19 +18,20 @@
         // HTML Collection ->  유사배열
         // getElementsByTagName, getElementsByClassName 등
         // 배열의 형태이고, 인덱스O, 길이O, 배열 함수X
+        // -> for 문으로 뽑아낼 수 있음
 
 
         // h3 요소 id로 가져오기
         let h3_element = document.getElementById('h3Tag');
-        console.log(h3_element);
+        console.log('getElementById : ' ,h3_element);
 
         // li 요소 태그이름으로 가져오기
         let li_list = document.getElementsByTagName('li');
-        console.log(li_list);
+        console.log('getElementsByTagName : ', li_list);
 
         // 한식 글자만 가져오기
         // .innerText -> "글자"만 가져오기
-        console.log(li_list[0].innerText);
+        console.log('li_list의 0번째 인덱스 글자만 가져오기 : ', li_list[0].innerText);
 
         for(let li of li_list){
             console.log(li.innerText);
@@ -38,7 +39,7 @@
 
         // getElementsByClassName 로 p요소 가져오기
         let p_element = document.getElementsByClassName('pTag');
-        console.log(p_element[0].innerText); // -> HTMLCollection 의 배열로 접근해줘야함
+        console.log('getElementsByClassName : ' ,p_element[0].innerText); // -> HTMLCollection 의 배열로 접근해줘야함
 
         // for Each 문 -> 오류
         // li_list.forEach((li) => {

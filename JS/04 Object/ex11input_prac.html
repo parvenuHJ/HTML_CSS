@@ -8,22 +8,25 @@
 <body>
     <h1>입력한 값을 h1 태그로 출력해보기</h1>
     <input type="text" id="input_tag">
-    <button onclick="get_input()">h1태그 출력</button>
+    <button onclick="make_h1()">h1태그 출력</button>
 
     <!-- h1태그 출력될 공간 -->
     <div id="div_Tag"></div>
 
     <script>
         // 1. 버튼 클릭 시
-        // 2. input 요소 가져오기
-        let tag1 = document.getElementById('div_Tag')
-        const get_input = () => {
-            let get1 = document.getElementById('input_tag').value;
-            tag1 +=`<h1>${get1}</h1>`
-            document.write(tag1)
-        }
-        // 3. 입력값 h1 태그로 출력하기
+        // 2. input 요소 가져오기 (input, textarea, select요소 -> value 속성으로 접근!)
+        // <h1> 을 씌워주려면 ->innerText(x) , innerHTML(o)
         
+        const make_h1 = () => {
+            let input_value = document.getElementById('input_tag');
+            // 3. 입력값 h1 태그로 출력하기 ( 출력하고 출력값 유지 -> +=)
+            document.getElementById('div_Tag').innerHTML +=  `<h1> ${input_value.value}</h1>`
+                                                                    // input 속성이라서 value 속성으로 접근
+            // (선택) input 요소 안 비워주기
+            input_value.value = '';
+        }
+       
         
         
 
