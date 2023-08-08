@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse Event</title>
+    <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <h1> M😴use Event </h1>
+    <h1> M😴use Event </h1>
+    <h1> M😴use Event </h1>
+    <button>change!</button>
+
+    <script>
+        /*
+        $(선택자).on(이벤트타입, 이벤트핸들러);
+        $(document).on(이벤트타입, 이벤트타겟, 이벤트핸들러);
+        */
+
+        /*
+        this : 호출된 HTML 객체를 저장
+        ** 화살표 함수 안됨 -> (e)=>{e.target}
+        */
+
+        // 1. 버튼 클릭 시 , h1 요소 파란색 -> click
+        $(document).on('click', 'button', ()=>{
+            console.log('test');
+            $('h1').css('color','blue');
+        })
+        // 2. h1 요소 마우스 오버 시, h1 요소 빨간색 -> mouserover
+        // this -> mouseover 한 h1 요소만 적용
+        // this를 사용하기 위해 jQuery 는 비교적 오래된 거라 '()=>' 인식못함 -> function 으로 바꿔줌
+        $(document).on('mouseover','h1',function(){
+            $(this).css('color','red');
+        })
+        // 3. h1 요소 마우스 아웃 시, h1 요소 검은색 -> mouseout
+        // this 는 '()=>' 인식못함 -> event의 약자 e사용,  (e)=> { $(e.target)}
+        $(document).on('mouseout','h1',(e)=>{
+            $(e.target).css('color','black');
+        })
+    </script>
+</body>
+</html>

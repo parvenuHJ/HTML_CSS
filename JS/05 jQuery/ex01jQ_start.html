@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery start</title>
+    <!-- jQuery 라이브러리 연동하기 -->
+    <!-- 1. 다운로드 방식 -->
+    <!-- <script src="./code.jquery.com_jquery-3.7.0.min.js"></script> -->
+    <!-- 2. 네트워크 방식 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- jQuery 연동안했을때 뜨는 오류(F12에서) -->
+    <!-- Uncaught ReferenceError: $ is not defined -->
+</head>
+<body>
+    <h1>jQuery start</h1>
+    <button id = 'textBtn'>TEXT</button>
+    <button id = 'htmlBtn'>HTML</button>
+
+    <script>
+        // 1. h1 요소 접근 
+        
+        //원래 하던 방법 - 바닐라스크립트 라고 부름 그냥 기본적인 이라는 뜻 
+        let valJS = document.querySelector('h1');
+        console.log(valJS);
+
+        //let valJQ = jQuery('h1');    jQuery -> $   ==> wrapper(래퍼) : 인자로 전달된 요소들에 jQuery의 기능성을 부가해서 반환
+        // $(선택자)
+        let valJQ = $('h1');
+        console.log(valJQ);
+
+        // 2. TEXT 버튼 클릭 시 내용만 가져오기
+        // JS -> innerText
+        // jQuery -> text()
+
+        // .click 메소드를 줘서 클릭 시 실행되도록
+        $('#textBtn').click(() => {
+            console.log('text');
+            $('h1').text('내용 변경!'); // .innerText와 비슷
+        })
+        
+        // 3. HTML 버튼 클릭 시 태그까지 변경 (-> <a href = '#'> a 태그 </a> )
+        // JS -> innerHTML
+        // jQuery -> html()
+        $('#htmlBtn').click(()=>{
+            $('h1').html(`<a href='#'> a 태그 </a>`); // < a herf .. 이런식으로 띄어쓰기 해버리면 문자로 인식해버림
+
+        })
+
+    </script>
+</body>
+</html>
